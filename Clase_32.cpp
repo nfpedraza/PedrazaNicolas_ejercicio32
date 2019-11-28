@@ -6,7 +6,6 @@ using namespace std;
 
 //Para la resolucion del ejericico tome en cuenta la indicciones del libro, mis ejericios 29 y 25 para guiarme en el orden para declarar arreglos, matrices e imprimir datos y tambien de la resolucion del ejericio 29 el cual el profesor dio permiso de usar como plantilla del ejericio 31 para entender la forma de realizar matrices viejas y nuevas.
 
-const double rho= 0.01;
 const double MaxT=6.0, MaxL=1.0;
 const double dT =0.01, dL= 0.01; 
 const double c = 0.5;
