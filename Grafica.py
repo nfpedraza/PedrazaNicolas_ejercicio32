@@ -35,6 +35,6 @@ plt.ylabel("Displacement")
 plt.legend()
 
 plt.subplot(1,3,3)
-plt.plot(l, data[0,:]//4,c='r', label="L/4")
+plt.plot(l, data[101//4,:],c='r', label="L/4")
 plt.legend()
 plt.savefig("wav.png")
