@@ -6,8 +6,8 @@ using namespace std;
 
 //Para la resolucion del ejericico tome en cuenta la indicciones del libro,https://people.sc.fsu.edu/~jburkardt/cpp_src/fd1d_wave/fd1d_wave.html, mis ejericios 29 y 25 para guiarme en el orden para declarar arreglos, matrices e imprimir datos y tambien de la resolucion del ejericio 29 el cual el profesor dio permiso de usar como plantilla del ejericio 31 para entender la forma de realizar matrices viejas y nuevas.
 
-const double MaxT=6.0, MaxL=1.0, rho=24.0;
-const double dT =0.01, dL= 0.01; 
+const double MaxT=40.0, MaxL=1.0, rho=0.01;
+const double dT =0.0001, dL= 0.01; 
 const double c = sqrt(MaxT/rho), cp=dL/dT; //Courant condition
 const int L_n = (MaxL/dL);
 void wave(int L_n);
@@ -18,6 +18,7 @@ int main (){
 }
 
 void wave(int L_n){
+	
     ofstream fout("Clase_32.dat");
 	
     double t=0;    
@@ -26,7 +27,7 @@ void wave(int L_n){
     double *CF = new double [L_n];
     
     for(int i=0;i<(L_n+1);i++){
-    C[i] = sin(M_PI * ((i*dL)/MaxL)); //condicion inicial 
+    C[i] = pow(10,-4)*sin(2*M_PI * ((i*dL)/MaxL)); //condicion inicial 
     }
     CP[0]=0;
     CP[L_n]=0;
@@ -35,7 +36,7 @@ void wave(int L_n){
         }
     t+=dT;
 	
-    while (t<MaxT){
+    while (t<0.1){
         
         for(int i =0;i<(L_n+1);i++){
             fout<<CP[i]<<"\t";
