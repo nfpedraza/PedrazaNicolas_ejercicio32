@@ -10,7 +10,7 @@ const double MaxT=6.0, MaxL=1.0;
 const double dT =0.01, dL= 0.01; 
 const double c = 0.5;
 int L_n = (MaxL/dL);
-double cp=dL/dT;
+double cp=dL/dT; //Courant condition
 void wave(int L_n);
 
 int main (){
