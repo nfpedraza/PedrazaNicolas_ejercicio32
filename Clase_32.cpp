@@ -22,7 +22,7 @@ int main ()
 
 void wave(int L_n){
         
-    double paso=0, x=0, t=0;
+    double paso=0, t=0;
 	
     ofstream fout("Clase_32.dat");
     
